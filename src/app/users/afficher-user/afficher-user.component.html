@@ -1,0 +1,18 @@
+<div class="card badge-light" [ngClass]="{'badge-light': true, 'bg-warning': status === false}">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <div>
+      <ul>
+        <li>{{nom}}</li>
+        <li>{{age}}</li>
+        <li>{{status}}</li>
+        <li><a [routerLink]="[id]">plus de details</a></li>
+      </ul>
+      <button class="btn btn-primary" [disabled]="status" (click)="on()">On</button>
+      <button class="btn btn-danger" [disabled]="!status" (click)="off()">Off</button>
+    </div>
+  </div>
+</div>
+<hr>
+
